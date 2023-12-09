@@ -39,7 +39,7 @@
 
 
 
-########### Chapter 3 : Using HELM to deploy the application ############
+########### Lab : Using HELM to deploy the application
 
 - Which command is used to search for a wordpress helm chart package from the Artifact Hub?
 
@@ -112,3 +112,87 @@
 
     # helm repo remove hashicorp
     "hashicorp" has been removed from your repositories
+
+
+
+
+########### Lab : Upgrading a HELM chart
+
+- Add bitnami helm chart repository to the cluster.
+        Note: - Make sure to add the bitnami chart to the cluster before moving to the next questions.
+
+    # helm repo add bitnami https://charts.bitnami.com/bitnami
+
+
+- How many releases of nginx can you see in the cluster now?
+
+    # helm list | grep -i nginx
+    dazzling-web    default         3               2023-12-09 04:03:23.452329297 -0500 EST deployed        nginx-12.0.4    1.22.0
+
+
+- How many revisions of nginx exists in the cluster?
+
+    # helm history dazzling-web
+    REVISION        UPDATED                         STATUS          CHART          APP VERSION      DESCRIPTION     
+    1               Sat Dec  9 04:03:13 2023        superseded      nginx-12.0.4   1.22.0           Install complete
+    2               Sat Dec  9 04:03:17 2023        superseded      nginx-12.0.5   1.22.0           Upgrade complete
+    3               Sat Dec  9 04:03:23 2023        deployed        nginx-12.0.4   1.22.0           Upgrade complete
+
+
+
+- Which version of nginx is currently running in the cluster?
+
+    # Check for the "deployed" status in the HELM chart history command. It is 1.22.0
+
+
+
+- The DevOps team has decided to upgrade the nginx to version 1.23 in the bitnami repository.
+    Make sure that the nginx version running in the cluster is 1.23.x.
+
+    - You can install any nginx helm chart version above 13 for installing 1.23.
+    
+    # helm upgrade dazzling-web bitnami/nginx --version 13
+    helm upgrade dazzling-web bitnami/nginx --version 13
+    Release "dazzling-web" has been upgraded. Happy Helming!
+    NAME: dazzling-web
+    LAST DEPLOYED: Sat Dec  9 04:08:13 2023
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 4
+    TEST SUITE: None
+    NOTES:
+    CHART NAME: nginx
+    CHART VERSION: 13.2.34
+    APP VERSION: 1.23.4
+
+
+
+- To which version is the nginx currently upgraded?
+
+    helm list
+    NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+    dazzling-web    default         4               2023-12-09 04:08:13.060832605 -0500 EST deployed        nginx-13.2.34   1.23.4
+
+    - The APP VERISION is "1.23.4"
+
+
+- Oops!.. There seems to be a minor issue in the website and the DevOps Team is asked to rollback the nginx to previous version!
+    Please rollback the nginx to previous version.
+
+    # helm list
+    NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART           APP VERSION
+    dazzling-web    default         4               2023-12-09 04:08:13.060832605 -0500 EST deployed        nginx-13.2.34   1.23.4
+
+    - The current Revision is 4, lets check all the revisions.
+
+    # helm history dazzling-web
+    REVISION        UPDATED                         STATUS          CHART          APP VERSION      DESCRIPTION     
+    1               Sat Dec  9 04:03:13 2023        superseded      nginx-12.0.4   1.22.0           Install complete
+    2               Sat Dec  9 04:03:17 2023        superseded      nginx-12.0.5   1.22.0           Upgrade complete
+    3               Sat Dec  9 04:03:23 2023        superseded      nginx-12.0.4   1.22.0           Upgrade complete
+    4               Sat Dec  9 04:08:13 2023        deployed        nginx-13.2.34  1.23.4           Upgrade complete
+
+    - Now rollback to revision 3.
+
+    # helm rollback dazzling-web 3
+    Rollback was a success! Happy Helming!
