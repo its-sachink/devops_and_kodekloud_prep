@@ -197,12 +197,57 @@
 #### 6: Lifecycle management with HELM :
 </br>
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2551ce79-0f84-45b9-823c-088164ff9f78)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/36f59425-8811-4c5b-87bb-e1c5424933e5)
+
+- Each time we pull in a chart and deployed, a release is created.
+    - A "Release" represents a package or a collection of a kubernetes objects.
+    - Since HELM knows what kubernetes objects belongs to each release, it can do things like upgrades, downgrades, or uninstall without touching objects that might belong to other releases.
+    - So each release can be managed independetly, even if they are based on same charts.
 
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/bc7d0fe7-4b4e-4b6c-a3dd-7d3116861038)
+
+- Now we will install a old version of nginx chart by passing a version of the HELM chart using "--version 7.1.0"
+- Now we need to patchi this nginx with new version.
+    - Out nginx based website might have many kuberentes objects (like pod, replicaset) in a k8s cluster.
+    - When we upgrade the Pods running nginx, may be we also need make some changes to other kubernetes objects.
+        - for example newer version of nginx may require newer environment variable to set, or new secret to be created
+        - which requires changing configuration objects and other files part of the manifests files.
+        - but it may be hard to keep track of all pieces that may be changed.
+        - fortunately HELM keeps track of every release change associated with that release, so we don't have to upgrade our objects one-by-one.
+        - HELM can upgrade all the objects automatically with one single command.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5f16d9e8-8703-4b6f-9465-7e43471ce46d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3329d0b2-6715-4ae8-be6d-7bbc547d0c0a)
+
+- In the upgrade command we now detect the version of the newer Pod that is deployed.
+- Here the HELM kept the record of the previous release too, we notices the "REVISION" number chaning to "2".
+- So the previous state would be "REVISION" number "1".
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a4ea88cb-29a1-4412-862c-4b13496893a1)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/85c19fcc-77c4-4592-bd18-1d5d64f46c63)
+
+- We want our release to return to a previous state.
+- We mention the revision version here that we want to rollback to.
+- Technically HELM does not goes back to "Revision 1" but instead it creates a new revision "Revision 3" with a similar configuration as in "Revision 1".
+- List HELM revision with a "HELM history" command, there would be 3 revisions, with latest being the rollback.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/08f62b62-d826-4bf5-83a8-ab4f246d3637)
+
+- There might be kubernetes packages that may require extra steps, for example in case of upgrade of Wordpress package. We might get a output where we might require "wordpress" admin password of application and databases, to make the necessary changes.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5a7dc2e7-5f82-4ba1-84e6-bbb48c1d1696)
 
 
-
-
+- All the rollbacks are very similar to a backup, restore feature. It doesn't cover the file or directory data that may be created with our applications.
+- Instead HELM only backsup and restore the declarations or manifests files of our kubernetes objects.
+- So for things that use persistent volumes or other forms of persistent data or something that is external like external database, rollback won't restore that data too.
+- The mysql pods would be restored to there previous state of the software versions used but the actual data in the database will remain the same, its data is not going to be backed up or restored.
+- So, there are options to take consistent backup of the data, before upgrading the charts or even to rollback or restore databases, but they are done using what is knowsn as "Chart hooks".
 
 
 
