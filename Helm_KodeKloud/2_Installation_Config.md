@@ -138,7 +138,7 @@
 </br>
 </br>
 
-#### 3: Working with HELM - basics :
+#### 4: Working with HELM - basics :
 </br>
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f64603ba-00ce-4225-b17c-4c49d02a2102)
@@ -169,7 +169,7 @@
 </br>
 </br>
 
-#### 4: Customizing chart parameters :
+#### 5: Customizing chart parameters :
 </br>
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/eb8feb68-c5c9-4a9d-92bd-984114e54203)
@@ -194,7 +194,7 @@
 </br>
 </br>
 
-#### 5: Lifecycle management with HELM :
+#### 6: Lifecycle management with HELM :
 </br>
 
 
