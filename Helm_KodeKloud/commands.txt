@@ -1,0 +1,114 @@
+########### Chapter 2 : Installation and Configuration ############
+
+- Install the helm package on the controlplane node.
+    If unsure how to install the helm tool, feel free to refer to the documentation. 
+    The Documentation tab is available at the top right panel.
+
+    # curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    # chmod 700 get_helm.sh
+    # ./get_helm.sh
+
+    - Documentation page location : https://helm.sh/docs/intro/install/#from-script
+
+
+
+- Awesome 💪!! Now that you have Helm installed ✨ identify the Helm version in the cluster.
+
+    # helm version
+
+
+
+- Which environment variable can be used to indicate whether or not Helm is running in Debug mode?
+    Use the help mode of the helm command to look for this information.
+
+    # $HELM_DEBUG                        | indicate whether or not Helm is running in Debug mode
+
+
+- What is a command line flag that can be used to enable verbose output?
+
+    # --debug                           enable verbose output
+
+    --
+  hooks       download all hooks for a named release
+  manifest    download the manifest for a named release
+  metadata    This command fetches metadata for a given release
+  notes       download the notes for a named release
+  values      download the values file for a named release
+
+
+
+
+
+########### Chapter 3 : Using HELM to deploy the application ############
+
+- Which command is used to search for a wordpress helm chart package from the Artifact Hub?
+
+    # helm search hub wordpress
+
+
+- Search for a consul helm chart package from the Artifact Hub and identify the APP VERSION for the Official HashiCorp Consul Chart.
+
+    # helm search hub consul | grep hashicorp
+
+        - and check the APP VERSION.
+
+
+- Add bitnami helm chart repository in the controlplane node. The url for bitnami repository is https://charts.bitnami.com/bitnami
+
+    # helm repo add bitnami https://charts.bitnami.com/bitnami
+
+
+
+- Which command is used to search for the wordpress package from the newly added bitnami repository?
+
+    # helm search repo wordpress
+
+
+- How many helm chart repositories are there in the controlplane node now?
+
+    # helm repo list
+    NAME            URL                                                 
+    bitnami         https://charts.bitnami.com/bitnami                  
+    puppet          https://puppetlabs.github.io/puppetserver-helm-chart
+    hashicorp       https://helm.releases.hashicorp.com
+
+
+
+- Deploy the Apache application on the cluster using the apache from the bitnami repository.
+    Set the release name to : amaze-surf
+
+    # helm install amaze-surf bitnami/apache
+    # helm install release-name repo-name/package-name
+
+
+- What version of apache did we just install on the cluster using the helm chart?
+
+    # helm list | grep -i apache
+    amaze-surf      default         1               2023-12-09 03:17:05.017069989 -0500 EST deployed        apache-10.2.4   2.4.58
+
+
+- How many releases of nginx charts can you see installed in the cluster now?
+
+    # helm list | grep -i nginx
+    crazy-web       default         1               2023-12-09 03:18:30.802957286 -0500 EST deployed        nginx-15.4.4    1.25.3     
+    happy-browse    default         1               2023-12-09 03:18:27.578236725 -0500 EST deployed        nginx-15.4.4    1.25.3
+
+
+- Uninstall the nginx chart release happy-browse from the cluster.
+
+     # helm list | grep -i nginx
+    crazy-web       default         1               2023-12-09 03:18:30.802957286 -0500 EST deployed        nginx-15.4.4    1.25.3     
+    happy-browse    default         1               2023-12-09 03:18:27.578236725 -0500 EST deployed        nginx-15.4.4    1.25.3
+
+    # helm uninstall happy-browse
+    release "happy-browse" uninstalled
+
+    # helm list | grep -i nginx
+    crazy-web       default         1               2023-12-09 03:18:30.802957286 -0500 EST deployed        nginx-15.4.4    1.25.3
+
+
+
+- Remove the Hashicorp helm repository from the cluster.
+
+    # helm repo remove hashicorp
+    "hashicorp" has been removed from your repositories
