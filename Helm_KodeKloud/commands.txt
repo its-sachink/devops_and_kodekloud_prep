@@ -443,6 +443,112 @@ spec:
 
 - Now install the webapp chart.
         Set the release-name as my-web-app
+  
 
-        
 
+########### Lab : Conditionals, With Blocks
+
+- Now update the service.yaml file in such a way that if the service type is NodePort, then it should fetch the nodePort value from the values.yaml file.
+
+    The service.yaml file is located under the /root/webapp-color/templates directory.
+
+            apiVersion: v1
+            kind: Service
+            metadata:
+            name: {{ .Values.name }}
+            namespace: default
+            spec:
+            ports:
+            - port: 8080
+                protocol: TCP
+                targetPort: 8080
+                {{- if eq .Values.service.type "NodePort" }}
+                nodePort: {{ .Values.service.nodePort }}
+                {{- end }}
+            selector:
+                name: webapp-color
+            type: {{ .Values.service.type }}
+            status:
+            loadBalancer: {}
+
+
+
+- Now update the configmap.yaml in such a way that the APP_COLOR should take the values based on the environment defined in values.yaml.
+
+        - if environment is production, value should be pink.
+        - else if environment is development, value should be darkblue.
+        - else, value should be green.
+                Note: Only make the necessary changes in the configmap.yaml file.
+
+        apiVersion: v1
+        metadata:
+        name: {{ .Values.configMap.name }}
+        namespace: default
+        kind: ConfigMap
+        data:
+        {{- if eq .Values.environment "production" }}
+            APP_COLOR: pink
+        {{- else if eq .Values.environment "development" }}
+            APP_COLOR: darkblue
+        {{- else }}
+            APP_COLOR: green
+        {{- end }}
+
+
+- If we try to install the webapp-color helm chart repository now, will the serviceAccount be created?
+
+        serviceAccount:
+        # Specifies whether a service account should be created
+        create: false
+        # Annotations to add to the service account
+        annotations: {}
+        # The name of the service account to use.
+
+        - Since we are not making use of a conditional for the service account, the field create: false in the values.yaml file is ignored.
+
+
+- Make appropriate changes in the serviceaccount.yaml file to:
+    - Check whether serviceAccount should be created or not (use the with conditional).
+    - Use the serviceAccount name from the values.yaml file.
+
+        {{- with .Values.serviceAccount.create }}
+        apiVersion: v1
+        kind: ServiceAccount
+        metadata:
+        name: {{ .Values.serviceAccount.name }}
+        labels:
+            app: webapp-color
+        {{- end }}
+
+
+-   Now that we have updated the serviceaccount.yaml file with the condition, update the values.yaml file to enable creation of serviceaccount.
+
+        The serviceaccount section in the values.yaml should be modified as follows:
+
+            serviceAccount:
+                # Specifies whether a service account should be created
+                create: true
+
+
+
+
+- Try to dry-run the webapp-color chart now. Fix the chart if there is any issues with the chart.
+
+    # helm install webapp /root/webapp-color/ --dry-run
+    Error: INSTALLATION FAILED: template: webapp-color/templates/serviceaccount.yaml:5:18: executing "webapp-color/templates/serviceaccount.yaml" at <.Values.serviceAccount.name>: can't evaluate field Values in type bool
+
+    --
+    You need to add $ symbol as mentioned in the solution file for serviceaccount.yaml provided below:
+
+    {{- with .Values.serviceAccount.create }}
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+    name: {{ $.Values.serviceAccount.name }}
+    labels:
+        app: webapp-color
+    {{- end }}
+
+
+
+- 
