@@ -196,3 +196,176 @@
 
     # helm rollback dazzling-web 3
     Rollback was a success! Happy Helming!
+
+
+
+
+########### Chapter 3 : HELM Charts Anatomy ############
+
+
+
+########### Lab : Wiriting a HELM chart
+
+----------------------- Sample chart file --------------------------------
+controlplane ~/hello-world is 📦 v0.1.0 via ⎈ v3.13.1 ➜  ls
+Chart.yaml  README.md  templates  values.yaml
+
+controlplane ~/hello-world is 📦 v0.1.0 via ⎈ v3.13.1 ➜  cat Chart.yaml 
+apiVersion: v2
+appVersion: 1.16.0
+description: A Helm chart for Kubernetes
+Name: hello-world
+type: application
+version: 0.1.0
+
+controlplane ~/hello-world is 📦 v0.1.0 via ⎈ v3.13.1 ➜  cat templates/
+deployment.yaml  service.yaml     
+
+controlplane ~/hello-world is 📦 v0.1.0 via ⎈ v3.13.1 ➜  cat templates/deployment.yaml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-hello-world
+  labels:
+    app: hello-world
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+
+controlplane ~/hello-world is 📦 v0.1.0 via ⎈ v3.13.1 ➜  cat values.yaml 
+# Default values for hello-world.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.16.0"
+
+nameOverride: ""
+fullnameOverride: ""
+------------------------------------------------------------------------------
+
+- Create a helm chart at /root/webapp-nginx for this application by converting the deployment and service definition files into templates.
+    
+    Create a chart first and then move the definition files into the templates directory.
+        The deployment and service objects should be named in the format RELEASE-NAME-nginx.
+        Set apiVersion for the chart to v2.
+        Name the chart webapp-nginx.
+        Set version number to 0.1.1.
+        Set appVersion to 1.16.0.
+            Values file has a variable image set by default so make changes for an image nginx:1.16.0.
+        Value of image variable to be used in deployment as the image name for the container.
+
+    Note: - Remove the unused YAML and text files from the templates directory.
+
+---------------------- sample files ---------------------------
+controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  ls
+charts  Chart.yaml  templates  values.yaml
+
+controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  cat Chart.yaml 
+apiVersion: v2
+name: webapp-nginx
+description: A Helm chart for Kubernetes
+type: application
+version: 0.1.1
+appVersion: "1.16.0"
+
+controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  cat values.yaml 
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: 1.16.0
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
+
+controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  cat templates/service.yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-nginx
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
+      name: http
+  selector:
+    app: nginx
+
+controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  cat templates/deployment.yaml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: {{ .Values.image.repository }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+
+--------------------------------------------------------------------
+
+- Now install the webapp-nginx helm chart.
+    Release-Name:webapp
+
+
+        controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  ls
+        charts  Chart.yaml  templates  values.yaml
+
+        controlplane ~/webapp-nginx is 📦 v0.1.1 via ⎈ v3.13.1 ➜  cd ..
+
+        controlplane ~ ➜  helm install webapp ./webapp-nginx/
+        NAME: webapp
+        LAST DEPLOYED: Tue Dec 12 01:13:02 2023
+        NAMESPACE: default
+        STATUS: deployed
+        REVISION: 1
+        TEST SUITE: None
+
+        controlplane ~ ➜  kubectl get deploy | grep -i webapp
+        webapp-nginx   1/1     1            1           13s
