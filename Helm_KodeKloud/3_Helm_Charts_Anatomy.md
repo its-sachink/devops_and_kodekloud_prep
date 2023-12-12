@@ -126,6 +126,53 @@
 - After fixing the issue as above.
 
 
+</br>
+</br>
+</br>
+
+#### 3 : Functions & Pipelines :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6468ebd3-78eb-435b-8ae7-e4fb80f66e84)
+
+- There might be a case where user might not have provided the "nginx" image name
+- In that case we might need to use some default value, for which we can use functions.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0ca2a9a4-f193-4311-a061-b60a88f9d98c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0f5bc065-3da4-492f-a479-5403609e8afd)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0d641950-5ad3-4621-b196-b6202c1f86be)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e395cd72-8ee3-4c69-a315-aff511f4471b)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/fe56fdd8-e306-4c50-a4be-aebcb17a2ab4)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/15f21443-e225-4c8a-b84d-f9acabb62c08)
+
+- Pipelines :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a774fc8a-517e-4742-aeca-8fbfae136205)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cc1421ba-21bd-438d-aff6-9ab3094d6682)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0f8631ea-b81b-41c4-9900-d952aab2839b)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/11514b77-5474-49ef-ba0c-7f83b2c86747)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
