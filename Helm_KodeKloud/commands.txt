@@ -369,3 +369,80 @@ spec:
 
         controlplane ~ ➜  kubectl get deploy | grep -i webapp
         webapp-nginx   1/1     1            1           13s
+
+
+
+
+########### Lab : Using Functions and Pipelines
+
+
+- Which function takes a list of values and returns the first non-empty one?
+
+        The coalesce function takes a list of values and returns the first non-empty one.
+            coalesce 0 1 2
+            The above returns 1
+
+
+- Which function can be used to generate a random password that uses only letters a-zA-Z ?
+
+        Function randAlpha can be used to generate cryptographically secure (uses crypto/rand) random strings with characters a-zA-Z.
+
+
+- What would be the output of this expression if wordpressPassword is PassW0rd ?
+        {{ .Values.wordpressPassword | b64enc | quote }}
+
+
+        Run the command: 
+            # echo -n PassW0rd | base64
+            UGFzc1cwcmQ=
+
+                to generate the base64 encoded string and -n flag removes the trailing newlines.
+
+
+- We have created a helm chart package at /root/ directory named webapp. What will be the tag name for the container image that will be created when we deploy the helm package webapp?
+
+    {{ .Values.image.tag | default .Chart.AppVersion }}
+
+    - If you check values.yaml file, the tag is mentioned empty, which means the tag name will be the AppVersion mentioned in the Chart.yaml.
+
+
+- What about now? What will be the tag set on the container image now? We made a few changes.
+
+    When you check the deployment.yaml file you can see tag name as,
+
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default 2.4 }}"
+
+
+
+- We have decided that all labels have the first letter in upper case. 
+    Change the serviceaccount.yaml file so that the label tier ends up being Frontend instead of the frontend as it is currently. 
+    Any label set in the values.yaml file for the service account must have its first letter converted to upper case.
+
+    You may use a command like this to test your work:
+        # helm template /root/webapp --set serviceAccount.labels.tier=customlabel
+
+    This overrides the default label set in the values.yaml file with a custom label you pass in from the command line. 
+    Then look for the generated serviceaccount.yaml file.
+        # helm template /root/webapp --set serviceAccount.labels.tier=customlabel | grep tier
+
+
+    - In the serviceaccount.yaml edit the label as : 
+        tier: {{ .Values.serviceAccount.labels.tier | title }}
+
+
+- Use the appropriate function to convert the label app in the serviceaccount.yaml file from web_application to WebApplication .
+
+        web_site should become WebSite
+        my_site should become MySite
+
+    - In the serviceaccount.yaml edit the label as: app: {{ .Values.serviceAccount.labels.app | camelcase }}
+
+    # helm template /root/webapp/ --set serviceAccount.labels.app=web_site | grep -i website
+    app: WebSite
+
+
+- Now install the webapp chart.
+        Set the release-name as my-web-app
+
+        
+
