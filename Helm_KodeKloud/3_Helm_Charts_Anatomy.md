@@ -161,6 +161,85 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/11514b77-5474-49ef-ba0c-7f83b2c86747)
 
 
+</br>
+</br>
+</br>
+
+#### 4 : Conditionals, With Blocks :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e6045d4d-acbe-45c4-86bd-ae7a9b14c445)
+
+- What if you want to conditionally add the lines.
+- For example if value is present in the values.yaml file then populate the manifest.
+</br>
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1e5ca677-bde0-4af3-b7c6-db5676c743db)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b02baf69-6c95-4b18-8bc5-7b500fb055b2)
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6304065b-3681-4f06-b964-1b080f30ee38)
+
+- Only if the "orgLabel" value is present the values.yaml file then populate the service.yaml file.
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3632cfd6-f123-475e-950d-28e8874580a2)
+
+- Remove the empty lines, white spaces using the "-".
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/aa586d14-b033-49d7-8c10-b1b7f91bb812)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e7322ec5-6cef-4c4e-83f4-9cc2c1b1ab96)
+
+</br>
+</br>
+- Common use case :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7fe35130-41f4-43d8-b78c-5b62350e0cc7)
+
+- Common usecase of conditional is to create the objects of certain kinds or not.
+</br>
+</br>
+</br>
+</br>
+
+- With Blocks (scope) :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4bd5e5a9-8e45-4fc4-9b1a-a67636317d19)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/64458e02-eb6e-4caa-841e-0d9f902323eb)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/11411de2-3206-4fec-a8c1-5845adce7840)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7ec60fed-626a-4b76-abde-ba9a90aac9f6)
+
+    - To escape from the scope and to refer to the root scope, we use $ sign.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/99097ff7-fe63-424e-b756-4c62e07e14b7)
+
+     - We use the Root scope using the $ here.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f71b3d3f-ad65-45a6-b7aa-bf5482a5500c)
+
+
+- Loops & Ranges :
+
+ ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3cc0bbc3-92ee-4ec6-a7e0-4b0d525a369a)
+
+ ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dd5fa8f2-f890-4a9c-ac21-51fd008a9bab)
+
+ ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ef30c4df-0036-4de9-94b1-e67741b0af90)
+
+ ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/9349632c-d205-467e-945b-34d426952d9c)
+
+
+
+ 
+
+
+
+  
 
 
 
