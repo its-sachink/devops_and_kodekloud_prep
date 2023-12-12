@@ -551,4 +551,44 @@ spec:
 
 
 
-- 
+- Set additional labels for the serviceaccount which is defined in the values.yaml under the serviceAccount section.
+
+        serviceAccount:
+        # Specifies whether a service account should be created
+        create: true
+        # Annotations to add to the service account
+        annotations: {}
+        # The name of the service account to use.
+        # If not set and create is true, a name is generated using the fullname template
+        name: webapp-sa
+        labels:
+            tier: frontend
+            type: web
+            mode: proxy
+
+    After deploying on the cluster. Please make sure that the keys and values are fetched from the values.yaml in the form as shown below:
+
+    For example:
+
+        Name:                webapp-sa
+        Namespace:           default
+        Labels:              app=webapp-color
+                            app.kubernetes.io/managed-by=Helm
+                            mode=proxy
+                            tier=frontend
+                            type=web
+        ...
+
+
+    ----
+        {{- with .Values.serviceAccount.create }}
+        apiVersion: v1
+        kind: ServiceAccount
+        metadata:
+        name: {{ $.Values.serviceAccount.name }}
+        labels:
+            {{- range $key, $val := $.Values.serviceAccount.labels }}
+            {{ $key }}: {{ $val }}
+            {{- end }}
+            app: webapp-color
+        {{- end }}
