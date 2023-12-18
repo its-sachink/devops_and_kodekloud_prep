@@ -165,7 +165,7 @@
 </br>
 </br>
 
-#### 4 : Conditionals, With Blocks :
+#### 4 : Conditionals, With Blocks, Ranges :
 </br>
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e6045d4d-acbe-45c4-86bd-ae7a9b14c445)
@@ -232,6 +232,88 @@
  ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ef30c4df-0036-4de9-94b1-e67741b0af90)
 
  ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/9349632c-d205-467e-945b-34d426952d9c)
+
+</br>
+</br>
+</br>
+
+#### 5 : Named Templates & Chart Hooks :
+</br>
+
+- Named Teampltes :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dc73eb6f-f34c-4676-be35-e3953f693ada)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d1af5045-e952-416d-a573-d698013f32cd)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ac1e0a86-e593-4c54-8af3-1eb4308579de)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/65473f10-9ea8-4c6a-94aa-6bd39abfcefa)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a87b6bcf-0414-42c7-abf8-fe05a2776f99)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5fa7fe8d-58ca-4ca4-b467-9d9f75f0c904)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3b539da8-231f-428b-88e4-68c9732aa8bb)
+
+</br>
+
+- Chart Hooks :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c7358e61-3a2e-4e0e-8c0d-6a7472dd3b1f)
+
+  - We might needs to do some extra stuff too, whenever we do a "helm upgrade" a database backup should be taken before the upgrade.
+        - or sending an email upgradation before actual upgradation, etc.
+        - These extra actions can be implemented using the "Chart hooks".
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5f890478-32de-4210-8df5-35738591e19b)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/23dc2750-6a47-4912-bee3-50f1693d77f1)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/525ff3f3-7b78-4097-8325-1b43f9dff1fa)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/807476b6-feca-48d1-8e4d-5b73c9a33a4c)
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/107a572e-4486-4563-8e73-e5814f0ada40)
+
+- For running a script only once, we create a "Job" instead of "Pod".
+- similary we can use, ppost-upgrade, pre-roll back, etc hooks.
+
+</br>
+
+ ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5462eb85-f75f-4e5e-903b-63215dcae348)
+
+- Multiple pre-upgrade hooks can be used, but we might need some particular order, likfe email annoucements needs to be go first, then  side-wide banner need be displayed and then finally the backup has to be started.
+- For this we set a wegiht for each hooks/jobs, in order which they should be configured. The weights can be configured from negative to positive.
+- HELM sorts them in the ascending order and executes them in the ascending order.
+- Multiple hooks can be placed with the same weight, at that time the hooks would be executed based on resource types and other criteria.
+
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/401e696a-006d-4b76-8bb5-abbd295144ce)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ef1a4089-1632-40b6-b083-9417874fed3f)
+
+
+- The job remains there once it is executed, to clean-up we can set up the hook deletion policies.
+- "hook-succedded" in this policy hook remains as it is if the "backup" job fails, we might need this resource for debug purpose.
+- "hook-failed" in this case the "backup" job is deleted, even if the hook fails.
+- "before-hook-creation" this deletes the previous hook resource before the new "hook" is launched. It tries to avoid creation of duplicate objects.
+
+
+
+
+  - 
+
+  
+
+
+
+
+
+
+
 
 
 
