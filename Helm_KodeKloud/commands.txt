@@ -769,4 +769,31 @@ spec:
 
 ########### Lab : Uploading Charts
 
+- Which command packages a chart into a versioned chart archive file?
+
+    # helm package
+
+
+- Which flag can be used to sign a helm package?
+
+    # -- sign
+
+
+- Which files provide cryptographic verification that a chart has not been tampered with, and was packaged by a trusted provider?
+
+    - Provenance
+
+
+- Which command can be used to check that the given chart has a valid provenance file?
+
+    # helm verify
+
+
+- We have added the webapp-color chart in the /root/ directory.
+    Package the chart in the /root/package directory.
+
+    # mkdir /root/package
+    # cd /root/package/
+    # helm package /root/webapp-color
+    Successfully packaged chart and saved it to: /root/package/webapp-color-0.1.0.tgz
 
