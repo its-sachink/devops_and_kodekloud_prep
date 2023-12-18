@@ -723,3 +723,50 @@ spec:
     echo "Visit http://127.0.0.1:8080 to use your application"
     kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:$CONTAINER_PORT
     {{- end }}
+
+
+
+- Now create a new job named upgrade-hook with annotation hook as post-upgrade and upgrade the chart which you installed previously.
+        App version should be 2.4.51 and Chart version should be 0.2.
+
+        Image to be used in the job should be alpine.
+
+        The job should provide an output Successful Upgradation.
+
+    
+    - First update the Chart.yaml as follows:
+
+        apiVersion: v2
+        appVersion: 2.4.51
+        description: An Apache Application
+        name: webapp
+        type: application
+        version: 0.2    
+
+    - Create a new file upgrade-job.yaml as shown below:
+
+        apiVersion: batch/v1
+        kind: Job
+        metadata:
+        name: upgrade-hook
+        annotations:
+            "helm.sh/hook": post-upgrade
+        spec:
+        template:
+            spec:
+            containers:
+            - name: upgrade-hook
+                image: alpine
+                command: ["echo",  "Successful Upgradation"]
+            restartPolicy: Never
+        backoffLimit: 4
+
+    - Then run command "helm upgrade httpd" webapp.
+
+
+
+
+
+########### Lab : Uploading Charts
+
+
