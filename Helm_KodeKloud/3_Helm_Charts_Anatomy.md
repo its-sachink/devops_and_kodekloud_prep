@@ -301,10 +301,73 @@
 - "hook-failed" in this case the "backup" job is deleted, even if the hook fails.
 - "before-hook-creation" this deletes the previous hook resource before the new "hook" is launched. It tries to avoid creation of duplicate objects.
 
+</br>
+</br>
+</br>
+
+#### 6 : Packaging, Signing Charts & Uploading Charts :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4b1ebb41-b1f7-4974-b55f-3a5e0e8124a7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/489fc822-5eb6-48bc-9c82-f0b1b0d162b2)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e8a8e672-017f-405b-9bcc-0d8ca5eb48e5)
+
+- We might need to sign our chart, to avoid the hacker preventing from modifying the charts.
+- "Public key" is used to make sure the Chart is signed validly.
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/67acd6a8-1353-43ae-8afd-514acfd9553c)
+
+- We can use "gpg" quick generate key to sign a Chart.
+- In production "gpg --full-generate-key" command is used.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a5fac6e0-0394-47ac-9765-b4e69278dd78)
+
+- We package is using "helm package --sign" option.
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/07ae8931-e7e6-428d-a3ab-f44350457274)
+
+- Addition file "provenance" file is generated storing the SHA hash.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b16cf514-ed9d-42f6-9db6-0cdf977c7465)
+</br>
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a96ecc9f-139f-4846-9dae-eb676d53db4b)
+
+- Uploading the Charts
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6fd23655-0949-4dc2-a08b-0edacea3ff48)
+
+- "Index.yaml" file contains details of all the contents of the Chart.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1abf6c19-f7da-4b6e-b860-557bb8573d02)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/bf2112f1-de4c-426d-8e41-126f1e76f5b3)
+
+- To generate the "Index.yaml" file, mention the URL of the repository to which we would be uploading the Chart .tgs file to.
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3a171734-4c7f-4f61-874d-56671ee3ba18)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cbbe9881-f4eb-4982-af16-e93414df8e75)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5d9ea6f3-fd80-4c18-bd93-919f4a4baccf)
 
 
 
-  - 
+
+
+
+
+
+
+
+
 
   
 
