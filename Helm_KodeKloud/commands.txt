@@ -446,7 +446,7 @@ spec:
   
 
 
-########### Lab : Conditionals, With Blocks
+########### Lab : Conditionals, With Blocks & Ranges
 
 - Now update the service.yaml file in such a way that if the service type is NodePort, then it should fetch the nodePort value from the values.yaml file.
 
@@ -592,3 +592,134 @@ spec:
             {{- end }}
             app: webapp-color
         {{- end }}
+
+
+
+########### Lab : Charts Hooks
+
+- Now add the label added in the template file to the deployment.yaml file.
+    Use include statement and correct indentation.
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            labels:
+            {{- include "labels" . | indent 2 }}
+                app: webapp-color
+            name: {{ .Values.name }}
+            spec:
+            replicas: 1
+            selector:
+                matchLabels:
+                {{- include "labels" . | indent 4 }}
+                app: webapp-color
+            template:
+                metadata:
+                labels:
+                {{- include "labels" . | indent 6 }}
+                    app: webapp-color
+                spec:
+                containers:
+                - image: kodekloud/webapp-color
+                    name: webapp-color
+                    envFrom:
+                    - configMapRef:
+                            name: {{ .Values.configMap.name }}
+
+
+- Now define a selectorLabels section in the template file. You should use the selector unit: dev for the service.
+        Note: We have already updated the selector field in the service.yaml file.
+
+    
+    - The _helpers.tpl file should be as follows:
+
+        {{/*
+        Common labels
+        */}}
+        {{- define "labels" }}
+        unit: dev
+        {{- end }}
+
+
+        {{- define "webapp-color.selectorLabels" }}
+        unit: dev
+        {{- end }}
+
+
+
+- Now modify the install-job.yaml so that it will only execute after all resources are loaded into Kubernetes in /root/webapp directory.
+
+
+    - The install-job.yaml should be modified as below:
+
+        apiVersion: batch/v1
+        kind: Job
+        metadata:
+        name: install-hook
+        annotations:
+            "helm.sh/hook": post-install    <<
+        spec:
+        template:
+            spec:
+            containers:
+            - name: install-hook
+                image: alpine
+                command: ["echo",  "Successful Installation"]
+            restartPolicy: Never
+        backoffLimit: 4
+
+
+- Which hook deletion policy deletes the previous resource before a new hook is launched?
+
+    - before-hook-creation
+
+
+
+- Install the webapp chart repository.
+
+    The release name should be httpd.
+
+    After creation, you can see the pod status Completed, which is created by a job called install-hook. Check the pod log to view the output.
+
+    # helm install httpd webapp
+
+
+    - helm install https webapp
+    NAME: https
+    LAST DEPLOYED: Mon Dec 18 18:00:31 2023
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    TEST SUITE: None
+    NOTES:
+    1. Get the application URL by running these commands:
+    export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services my-webapp)
+    export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+    echo http://$NODE_IP:$NODE_PORT
+
+    # controlplane ~/webapp is 📦 v0.1.0 via ⎈ v3.13.1 ➜  ls
+    Chart.yaml  templates  values.yaml
+
+    # controlplane ~/webapp is 📦 v0.1.0 via ⎈ v3.13.1 ➜  cd templates/
+
+    # controlplane ~/webapp/templates ➜  ls
+    deployment.yaml  install-job.yaml  serviceaccount.yaml
+    _helpers.tpl     NOTES.txt         service.yaml
+
+    # controlplane ~/webapp/templates ➜  cat NOTES.txt       << Used to display the above banner.
+    1. Get the application URL by running these commands:
+    {{- if contains "NodePort" .Values.service.type }}
+    export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "webapp.fullname" . }})
+    export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
+    echo http://$NODE_IP:$NODE_PORT
+    {{- else if contains "LoadBalancer" .Values.service.type }}
+        NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+            You can watch the status of by running 'kubectl get --namespace {{ .Release.Namespace }} svc -w {{ include "webapp.fullname" . }}'
+    export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace }} {{ include "webapp.fullname" . }} --template "{{"{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}"}}")
+    echo http://$SERVICE_IP:{{ .Values.service.port }}
+    {{- else if contains "ClusterIP" .Values.service.type }}
+    export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/name={{ include "webapp.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+    export CONTAINER_PORT=$(kubectl get pod --namespace {{ .Release.Namespace }} $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+    echo "Visit http://127.0.0.1:8080 to use your application"
+    kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:$CONTAINER_PORT
+    {{- end }}
