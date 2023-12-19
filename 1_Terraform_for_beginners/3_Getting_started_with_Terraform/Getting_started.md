@@ -1,3 +1,6 @@
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e04a6797-37c1-45e3-9b3b-7f093c4ede52)
+
+
 ##### Installing Terraform :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/66641f46-16ff-4369-9329-d0be26ecd68e)
