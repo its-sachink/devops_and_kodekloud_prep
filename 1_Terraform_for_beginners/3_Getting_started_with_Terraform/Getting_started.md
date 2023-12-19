@@ -9,6 +9,7 @@
 - Resource is a object that Terraform managed like a file, S3 bucket, EC2, DynamoDB, Azure, GCP,etc.
 
 </br>
+
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a9438ec7-15fd-4ec8-bc7e-2b71a234071e)
 
 - We will for now look into 2 types of resources,
