@@ -1,7 +1,7 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e04a6797-37c1-45e3-9b3b-7f093c4ede52)
 
 
-##### Installing Terraform :
+#### Installing Terraform :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/66641f46-16ff-4369-9329-d0be26ecd68e)
 
@@ -21,7 +21,7 @@
 </br>
 </br>
 
-##### HashiCorp Configuration Language (HCL) Basics :
+#### HashiCorp Configuration Language (HCL) Basics :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e41c2361-1e30-47f4-a79f-3c5c2996b905)
 
@@ -84,7 +84,7 @@ A simple terraform workflow consists of 4 steps,
 </br>
 </br>
 
-##### Update and Destroy Infrastrucutre :
+#### Update and Destroy Infrastrucutre :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/71972858-3405-4db1-bc50-d038423eca14)
 
@@ -97,7 +97,7 @@ A simple terraform workflow consists of 4 steps,
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7595f655-c77f-49e9-9879-8cf233550373)
 
 
-##### Labs :
+#### Labs :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0b210741-001e-4c2a-a20c-5f39dd3c6581)
 
