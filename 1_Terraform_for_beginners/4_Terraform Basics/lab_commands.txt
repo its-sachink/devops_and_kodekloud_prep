@@ -1,0 +1,15 @@
+########## Lab : Terraform Providers 
+
+- How many providers are there ?
+
+❯ pwd
+/root/terraform-projects/things-to-do/.terraform/providers
+
+root in things-to-do/.terraform/providers on ☁️  (us-east-1) 
+❯ ls
+registry.terraform.io
+
+
+
+- What is the version of the plugin for the local provider that has been downloaded for this configuration?
+    >> Run terraform init and inspect the output or check the version of the plugin downloaded inside the .terraform/providers directory.
