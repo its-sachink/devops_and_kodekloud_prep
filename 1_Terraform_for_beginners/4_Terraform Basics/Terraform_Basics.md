@@ -32,6 +32,32 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e53288c4-352d-4df9-b07a-69e7d04518f7)
 
+</br>
+</br>
+
+
+## 3 - Multiple Providers :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0357c910-0ccb-405d-8dad-c6c552442255)
+
+- Let's use the multiple providers now, lets use the "random" provider here.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/bf87a242-d3ad-4e6e-aa1b-81a41f86e76b)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dbf3036b-f385-48c8-ab17-b510af550d8c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/87e8bd3e-1976-4dc1-835b-50bd75bab4b2)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2cce1d40-b33a-459e-b741-ed147ebe8e8d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/36291b81-3a12-40fa-906d-3809a7ab05f3)
+
+
+
+
+
+
+
 
 
 
