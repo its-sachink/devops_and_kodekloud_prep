@@ -103,6 +103,40 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a3250310-daca-4f5b-8618-5d24245f5cfa)
 
+</br>
+</br>
+
+## 6 - Using Variables in Terraform :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b3a0fe7a-db12-4cd9-8005-0864c9a95a81)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6986e4d3-eecc-4db6-b7c4-0391a0d4030a)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/32b68d45-85e2-4a07-ba48-cd2da35b17cd)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ccdd13c2-eb41-4d8b-bd59-80ce96d8435c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/bd8113ef-ff9c-43ec-8a0f-361d6d23e9d9)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2574a3f7-d129-48eb-b4f7-24a1f27f79e0)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/95d71d59-6c9f-4eb4-a581-1449fd45c890)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6236e1ae-692e-4ae9-a2a4-9c04d6d3a4ed)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/04154248-30c5-4e33-bd6a-20ed5fe861c2)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5f3375e3-68c7-4e9f-8047-3ab58b360dbd)
+
+
+
+
+
+
+
+
+
+
 
 
 
