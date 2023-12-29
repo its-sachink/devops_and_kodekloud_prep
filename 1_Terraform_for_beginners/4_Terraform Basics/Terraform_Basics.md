@@ -52,6 +52,67 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/36291b81-3a12-40fa-906d-3809a7ab05f3)
 
+</br>
+</br>
+
+## 4 - Using Input Variables :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/52448261-cfd6-4f85-885a-cbb24c838c1f)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2a352e67-8079-42ab-b5f8-ccc7a68f2d9a)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f274e863-8b6b-4f75-b11c-3f20538c8e20)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f4cae534-20f8-46dc-897d-a82adde5b3c2)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e66ec951-a6da-4c1f-bbfb-a242d19d2be5)
+
+</br>
+</br>
+
+## 5 - Understanding the Variable Block :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/add84269-d0b4-440e-ab36-606b6d3de0ab)
+
+- Variables blocks accepts 3 parameters in the terraform,
+    - default : is the default value
+    - type : it is optional, but when used it enforces the type of variable value to be used.
+        Type has 3 values, String, number, bool, any
+    - description : it is optional, but good practise to use it.
+</br>
+
+- Additional types of variables in Terraform.
+  
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dd2e5ba4-e3e9-4c03-ac51-41a048a91da8)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/35ad7c53-8600-4834-9ffa-c4a65c48ce8d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0286fa51-561b-48f8-a9e6-695b5b28684c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/574b0fb3-a03a-4ba9-9b9e-1012f1654d5e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0395f2b5-d780-4496-8989-182c0ff159ac)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1fbb1561-35ca-4f36-a0fd-4a4e1e6cb062)
+
+- With Object we can create a complex data structures by combining all the variables types we have seen so far.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/96c76aaf-d406-4536-b1dc-8e212e8b17a7)
+
+- Simiplar to List, but List uses same variable types like list or numbers but with tuples we can make use of elements of different variable types.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a3250310-daca-4f5b-8618-5d24245f5cfa)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
