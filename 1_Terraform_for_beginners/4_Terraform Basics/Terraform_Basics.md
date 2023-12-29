@@ -158,8 +158,24 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e8088fa9-2a26-4c9c-b43c-a2609ec30a3f)
 
+</br>
+</br>
+
+## 9 - Output Variables :
+
+- Output variables : These variables can be used to store the value of an expressions in the terraform.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0eac440e-ea60-4a7d-bb08-0912fda63aa8)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b5bed4fa-a024-4b3f-91b6-bd2c49246141)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8bd6240f-ca42-4843-a15d-e180f20aa4cf)
 
 
+- Where we can make use of these output variables.
+      - Dependent resources can make use of reference expressions to get the output from one resource block as an input to another resource block.
+      - Also they can be used when you want to quickly display the provisioned resources on your screen.
+      - OR to fed the output variables to other IaC tools such as Adhoc Bash script or Ansible Playbook for configuration mgmt.
 
 
 
