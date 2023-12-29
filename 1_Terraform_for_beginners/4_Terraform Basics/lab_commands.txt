@@ -113,3 +113,27 @@ This file should make use of the local_file and random_pet resource type with th
     ---------------------------------
 
 
+
+########## Lab : Using Variables in terraform
+
+1)        resource local_file games {
+        filename = var.filename
+        content = "football"
+        }
+
+        Error: Reference to undeclared input variable
+        │ 
+        │   on main.tf line 2, in resource "local_file" "games":
+        │    2:   filename = var.filename
+        │ 
+        │ An input variable with the name "filename" has not been
+        │ declared. This variable can be declared with a variable
+        │ "filename" {} block.
+
+    >> Declare the variable called filename with type string in the file variables.tf.
+    Don't have to specify a default value.
+
+
+
+2) Terraform follows a variable definition precedence order to determine the value and
+the command line flag of –var or –var-file takes the highest priority.
