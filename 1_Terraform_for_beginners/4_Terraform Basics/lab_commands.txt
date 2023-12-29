@@ -137,3 +137,16 @@ This file should make use of the local_file and random_pet resource type with th
 
 2) Terraform follows a variable definition precedence order to determine the value and
 the command line flag of –var or –var-file takes the highest priority.
+
+
+
+
+########## Lab : Resource Attributes
+
+-  resource "time_static" "time_update" {
+}
+
+resource "local_file" "time" {
+  filename = "/root/time.txt"
+  content = "${time_static.time_update.id}"
+}
