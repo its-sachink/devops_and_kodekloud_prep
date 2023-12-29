@@ -152,6 +152,13 @@
 
 ## 8 - Resource Dependencies :
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/180a03a1-fdf0-48e8-8069-83a3a35c4b9e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6b562ca2-acd6-4531-9839-defe1f975dce)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e8088fa9-2a26-4c9c-b43c-a2609ec30a3f)
+
+
 
 
 
