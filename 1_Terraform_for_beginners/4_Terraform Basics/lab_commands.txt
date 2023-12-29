@@ -89,3 +89,27 @@ This file should make use of the local_file and random_pet resource type with th
             }
 
 
+########## Lab : Variables
+
+- Now, let's update this resource and add variables instead. Use the default value declared in the variable called jedi.
+    This variable is a map. For the argument called content use the value of the key by the same name.
+    And, similarly, for the argument called filename use the value by the same name.
+
+    ----- varaibles.tf --------------
+    variable "jedi" {
+     type = map
+     default = {
+     filename = "/root/first-jedi"
+     content = "phanius"
+     }
+  
+    }
+
+    --------- main.tf ---------------
+    resource "local_file" "jedi" {
+     filename = var.jedi["filename"]
+     content = var.jedi["content"]
+    }
+    ---------------------------------
+
+
