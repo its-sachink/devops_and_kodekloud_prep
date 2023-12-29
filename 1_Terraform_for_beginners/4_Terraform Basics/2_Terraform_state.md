@@ -18,8 +18,9 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8109e1b4-d334-44ec-8284-164a2db9c940)
 
-
-## Purpose of State :
+</br>
+</br>
+## 2_Purpose of State :
 
 - Each resource created and managed by terraform would have a unique-id, which is used to identify the resources in the real world.
 
@@ -49,7 +50,27 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f69e076d-8853-41ef-ad67-2c4d4a105ade)
 
+</br>
+</br>
 
+## 3_Terraform State Considerations :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/89e295c2-f02e-45e9-93a3-f59486f21f29)
+
+- Terraform state is a single source of truth. State is a non-optional in terraform.
+- State file contains sensitive information within it.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b4c4a6d6-bef9-4c06-ba2d-96e58dbd1b86)
+
+- The state may also store passwords. These information is classified as a senstive information.
+
+</br>
+</br>
+- Store the configuration files in Version control systems but store the state file in the secure backend repository such as AWS-S3, Terraform Cloud, etc.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/80bd0e5c-602f-431f-86d5-cb6c09b2506e)
+
+- Never edit the state files manually.
 
 
 
