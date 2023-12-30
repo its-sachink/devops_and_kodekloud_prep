@@ -1,3 +1,6 @@
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a8c92071-1686-427b-b6a1-6b4901286a31)
+
+
 ## 1 - Terraform Commands :
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f939e1d0-16b2-4d80-80ce-fb1bfef70a54)
