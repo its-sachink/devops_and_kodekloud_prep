@@ -179,6 +179,45 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b6ac504f-a6e7-4942-aef8-f79a1576eefa)
 
+</br>
+</br>
+
+## 8 - Version Constraints :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c4464054-687d-4be7-84c5-cb2395999745)
+
+- How to use the specific providers version in terraform.
+    - Providers use the plugin based architecture.
+    - "Terraform init" command download the latest version of the plugin needed by the configuration files.
+    - The functionality of the provider plugin may vary drastically from one version to another.
+
+- We can make sure that specific version of provider is used when we run the "terraform init" command.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f349eaeb-b36c-4977-8f21-1a1b76823eea)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d7cdfde4-4339-4952-86eb-247d41673384)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0a6a66a5-7e81-4670-b893-2aca44008a94)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1c735549-75d3-4ff9-9330-25dd188f306b)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/465563c1-1641-421d-a134-c58e34eb438d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e2040ac4-2366-451f-9384-c424cdb26d16)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/55e5f4b2-f4ec-4c21-a759-fd4e7a3a0be4)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/26db1876-1abf-4030-9697-9a1603ab775c)
+
+ 
+
+
+
+
+
+
+
+
 
 
 
