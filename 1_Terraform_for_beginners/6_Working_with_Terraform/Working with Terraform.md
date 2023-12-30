@@ -117,6 +117,80 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/62825b3c-82e9-4bb7-b0f0-ba24197ca22b)
 
 
+</br>
+</br>
+
+## 5 - Meta-Arguments :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7f73ebaf-454a-4696-9a89-f7b483d5be0f)
+
+- What if we want to create multiple resources of same instances, like 3 local_file resource.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/586637ff-2dd7-437d-a224-ebd1618fa695)
+
+- Meta Arguments can be used in any resource blocks to change the behavior of the resources, we have already seen few metaargument like "depends_on" & "lifecycle" rules.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/325cac6c-6b8e-4c31-800a-8bae597ac345)
+
+</br>
+</br>
+
+## 6 - Counts Metaagrument :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2b8942aa-769b-4336-85be-8089e26f5401)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ebcd59f2-24ec-4e92-aaf8-4b1874bda186)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/42c9e3a3-6eb6-4f1f-a2f6-e5358e377b7f)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4d2e4301-65ef-477f-9d13-cbfa909e6bec)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d00e3f73-5108-4f8c-ab29-0c20b57125c8)
+
+- Caveat with the "count" meta argument.
+    - Whenever we make changes to the variable list, terraform tries to adjust the index of the list arguments as well accordingly.
+    - And hence it destorys and recreates the resources again with the new index values.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b1c0f542-997d-4dc7-916a-e56514004978)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/037395dc-1d92-4b35-843c-b0d7fe90dab5)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dff8e1d8-1dde-484f-bb58-764912f0fffe)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/dac9bf57-3a55-43e9-9d4d-b74f143f4f32)
+</br>
+</br>
+
+## 7 - for-each :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3bf5691a-abf0-4053-a8b7-00e066efc156)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/af4f2e14-f917-422c-9270-44c68de9adc3)
+
+- for-each : It works only with MAPS or a SET (as they are not sequenced data types).
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ae60e968-6125-4b91-9e13-fe78cbeaa083)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0bff43a9-ac3a-4b73-848a-a5bc36ac9d25)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8a88d35a-0d41-4b22-bc9f-60d807059a23)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e3b40789-659c-4466-ab77-a52869e2ae9c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b6ac504f-a6e7-4942-aef8-f79a1576eefa)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
