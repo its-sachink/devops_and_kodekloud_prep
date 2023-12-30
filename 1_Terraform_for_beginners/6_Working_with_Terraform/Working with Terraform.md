@@ -86,6 +86,41 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7784d393-1980-41dc-8958-593c01b1a4f0)
 
 
+</br>
+</br>
+
+## 4 - Datasources :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/95f250a0-0e8c-4593-a63c-7f0d85331327)
+
+- Infrastructure can be create from other sources as well such as Ansible, Saltstack, Puppet or manually.
+    - For example if a database server is provisioned manually, terraform can read the attributes to provision the application server accordingly.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b1de2cbe-c468-4828-8e4b-fc4cacdfb329)
+
+- Datasource allows the terraform to read the attributes of the resources which are provisioned outside its control.
+    - Logical resource name : Into which the attributes for the resources will be read, with in the blocks we have arguments just like we have for normal resource
+      blocks.
+    - The datasource blocks consists of specific arguments for datasource and to know which argument is expected we can look up the provider documentation in terraform registry.
+
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6c4bc6dd-c40f-4c4c-a64c-86f4f26adfa5)
+
+
+    - The data read from the data source is then available in the "data" object of the terraform.
+    - To use the data in the pet resource, we can use the "data.local_file.dog.content".
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3a617db9-84ee-4c5c-904d-9a670724177e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5a64b938-4021-4d36-a83a-f792e2a3523d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/62825b3c-82e9-4bb7-b0f0-ba24197ca22b)
+
+
+
+
+
+
 
 
 
