@@ -133,6 +133,23 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1393101f-2923-4c2a-97f4-0be1d37bf2a7)
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/45282b32-4b70-4aeb-aae7-1cd42a832230)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5e01c396-6aa1-4b36-bd5e-372c1e87d925)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/347a6ae3-40ee-45f6-89e2-c85bdd7df457)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1dd0441e-6533-46a8-a0ee-d0ea537e92a0)
+
+- This will give full access to the bucket to the "finance-analysts" group in the IAM.
+  
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d36b37e1-41e3-4ed9-ba7b-e9aa7089b91f)
+
+
+
+
+
+
 
 
 
