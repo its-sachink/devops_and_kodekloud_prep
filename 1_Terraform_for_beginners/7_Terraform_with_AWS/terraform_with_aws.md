@@ -66,6 +66,54 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/604c58c4-5109-42fc-836b-091509805562)
 
+</br>
+</br>
+
+## 6 : AWS IAM with Terraform
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c92392a4-b4a9-49ab-8e86-97ad167806bb)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d3f2b0d9-e2b9-4879-ad66-0ae683a7d4e1)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/113d61c7-8e16-463b-a326-08498fac20fd)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/24bf01e9-8a4c-4540-9253-36b318a37954)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/beff6bc3-9592-4d73-bd86-31f4b12e1ba7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7291ca2e-d62e-4890-b68b-f95e5009e25a)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/af6911e6-d433-493b-95ab-a9a9a14c8b33)
+
+</br>
+</br>
+
+## 7 : IAM Policies with Terraform
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/22b5956d-ec67-40f8-979b-dbbbc56e9570)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/192fced7-930d-4220-876f-0bf46e18704e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/551accab-5232-493e-a388-5d2e5500295e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c1c1a7d2-cfe4-45df-9746-19ec548e6ee9)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/27c07e2f-42ab-446a-bf89-881edfc982be)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8e7a0555-b5b6-4e3e-963d-68b0149f3ca0)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
