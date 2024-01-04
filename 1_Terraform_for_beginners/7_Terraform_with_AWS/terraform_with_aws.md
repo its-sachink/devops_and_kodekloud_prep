@@ -1,3 +1,6 @@
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/eeb8c301-42b7-4e1a-8de7-542147fb3589)
+
+
 ## 1 : Getting Started with AWS
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f538e9ff-7ef1-4a1f-ba19-347dc6e31de9)
