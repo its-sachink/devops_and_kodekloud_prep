@@ -146,6 +146,36 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d36b37e1-41e3-4ed9-ba7b-e9aa7089b91f)
 
 
+</br>
+</br>
+
+## 10 : Intro to DynamoDB
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c61d42be-32b9-4be5-9b9b-ba3b1970d8f5)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7ac98338-98a8-4d07-90af-bbc542ef4ec7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/647056ec-2363-47f1-9345-6ad5733524ac)
+
+
+
+
+</br>
+</br>
+
+## 11 : DynamoDB with Terraform
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ace72cc7-6abd-4ede-b4b5-ebc79185401f)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/85a3f0a5-a0c0-4709-a469-3fe717eb815a)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c04047fb-fab4-4836-b7c5-5d9773986acd)
+
+
+
+
+
+
 
 
 
