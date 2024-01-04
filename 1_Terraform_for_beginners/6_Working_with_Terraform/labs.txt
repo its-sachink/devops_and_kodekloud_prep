@@ -1,0 +1,91 @@
+####### Lab - Lifecycle rules :
+
+- Let's change the order in which the resource called string is recreated. Update the configuration so that when applied, a new random string is created first before the old one is destroyed.
+    When ready, apply the changes with terraform apply.
+
+        resource "local_file" "file" {
+
+            filename = var.filename
+            file_permission =  var.permission
+            content = random_string.string.id
+
+        }
+
+        resource "random_string" "string" {
+            length = var.length
+            keepers = {
+                length = var.length
+            }  
+            lifecycle {
+                create_before_destroy =  true
+            }
+
+        }
+
+- update the configuration so that the resource super_pet is not destroyed under any circumstances with a terraform apply command.
+
+        resource "random_pet" "super_pet" {
+            length = var.length
+            prefix = var.prefix
+        
+            lifecycle {
+                prevent_destroy = true
+            }
+        }
+
+
+####### Lab - Data sources :
+
+####### Lab - Count and for each :
+
+- We have now created a variables.tf file in the same configuration directory. Update the main.tf file to make use of the list type variable defined for the filename argument.
+    Use count to loop through all the elements of this list and do not use hard-coded values.
+
+        resource "local_sensitive_file" "name" {
+            filename = var.users[count.index]
+            content = var.content
+            count = length(var.users)
+
+        }
+
+
+
+- Use for_each to loop through the list type variable called users.
+        Use the variable called content as the value of the argument content within main.tf.
+        When ready, run terraform init, plan and apply.
+
+        ----------- variables.tf ----------------
+        variable "users" {
+            type = list(string)
+            default = [ "/root/user10", "/root/user11", "/root/user12", "/root/user10"]
+        }
+        variable "content" {
+            default = "password: S3cr3tP@ssw0rd"
+        
+        }
+
+        ------------- main.tf ------------------
+        resource "local_sensitive_file" "name" {
+        for_each = toset(var.users)
+        filename = each.value
+        content = var.content
+        }
+
+
+
+
+####### Lab - Version Constraints :
+
+Now, change to the directory /root/terraform-projects/rotate. We have already initialized the configuration directory using the terraform init command.
+    
+    Inspect the rotation.tf file and find out the correct version of the provider plugin that is downloaded.
+    Choose the correct version from the below options:
+
+    You don't have to create the resources!!
+
+    >> Go onto the .terraform/providers configuration directory and inspect the correct version which has got downloaded.
+
+    # registry.terraform.io/hashicorp/google on ☁️  (us-east-1) 
+    ❯ ls
+    3.47.0
+
