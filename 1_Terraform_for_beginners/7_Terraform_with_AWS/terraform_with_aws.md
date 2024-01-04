@@ -105,6 +105,43 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8e7a0555-b5b6-4e3e-963d-68b0149f3ca0)
 
+</br>
+</br>
+
+## 8 : Introduction to AWS S3
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3d5202db-c6b3-457e-a144-b03cbfc84144)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f6f622e3-a8ea-4656-ad5d-5f60159b7a95)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e68ee642-af07-4f98-8b8d-f73f419dce1a)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/91828603-dbbd-4c99-9d88-d5210b6d4d73)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0d155c19-e82c-4b18-bf5a-a51c6b220733)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5f5bfd5f-45cc-4d6e-a36d-4521d27bf50d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/99f57f5d-38d4-4fb0-ba7f-7e6c6a1030f7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/590b4eb1-22b2-4fe7-80de-0a67908eddde)
+
+</br>
+</br>
+
+## 9 : S3 with Terraform
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1393101f-2923-4c2a-97f4-0be1d37bf2a7)
+
+
+
+
+
+
+
+
+
+
 
 
 
