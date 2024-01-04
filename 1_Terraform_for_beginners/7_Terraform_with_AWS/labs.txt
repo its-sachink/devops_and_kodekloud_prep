@@ -68,4 +68,74 @@ This framework is exposed at http://aws:4566. Hence, throughout this lab, we wil
 
     # aws --endpoint http://aws:4566 iam attach-group-policy --group-name project-sapphire-developers  --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
 
-    
+
+
+####### 2 : IAM with Terraform #######
+
+- Let's start off by creating an IAM User called mary but this time by making use of Terraform. In the configuration directory /root/terraform-projects/IAM, create a file called iam-user.tf with the following specifications:
+
+    Resource Type: aws_iam_user
+    Resource Name: users
+    Name: mary
+
+    --------------------------------------------
+    resource "aws_iam_user" "users" {
+        name = "mary"
+    }
+    --------------------------------------------
+
+
+- Add a new file called provider.tf containing a provider block for aws.
+    Inside this block add a single argument called region with the value ca-central-1.
+
+    ---------------- provider.tf ----------------------------
+    provider "aws" {
+    region                      = "us-east-1"
+    skip_credentials_validation = true
+    skip_requesting_account_id  = true
+
+    endpoints {
+        iam                       = "http://aws:4566"
+    }
+    }
+    --------------------------------------------
+
+
+- Use the count to add the list of variables from the "variables.tf" file.
+
+   ---------------- variables.tf ----------------------------
+    variable "project-sapphire-users" {
+        type = list(string)
+        default = [ "mary", "jack", "jill", "mack", "buzz", "mater"]
+    }
+   -----------------------------------------------------------------
+
+
+- Now, update the iam-user.tf to make use of the count meta-argument to loop through the project-sapphire-users variable and create all the users in the list.
+    You may want to make use of the length function to get the length of the list.
+
+    --------------------------------------------
+    resource "aws_iam_user" "users" {
+        for_each = toset(var.project-sapphire-users)         <<<< Preferred one
+        name = each.value
+    }
+    --------------------------------------------
+
+    OR 
+    --------------------------------------------
+    resource "aws_iam_user" "users" {
+        count = length(var.project-sapphire-users)
+        name = var.project-sapphire-users[count.index]
+    }
+    --------------------------------------------
+
+
+
+
+####### 3 : Terraform with AWS S3 #######
+
+
+
+
+
+####### 4 : DynamoDB #######
