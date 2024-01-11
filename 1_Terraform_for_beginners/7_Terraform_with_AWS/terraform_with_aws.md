@@ -145,7 +145,12 @@
   
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d36b37e1-41e3-4ed9-ba7b-e9aa7089b91f)
 
+</br>
+</br>
 
+## 10 : DynamoDB
+
+- Skiped for now.
 
 
 
