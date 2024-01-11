@@ -4,6 +4,7 @@
 
 ## 1: What is Remote State and State Locking.] :
 </br>
+
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/df3ef042-03cd-472e-88a6-1483e96b75dd)
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4e461407-a04d-4b3c-87b5-8ab2e4807954)
