@@ -63,3 +63,32 @@
     - Hence run "terraform init" command again, to move state file to the S3 backend.
 
 
+######### 2 : Lab : Terraform State Commands #########
+
+- We have created a few resources in the configuration directory /root/terraform-projects/project-anime. Inspect it.
+
+    Which of the following resources names are not part of the terraform state?
+
+    # Run "terraform state list" and find out the resource address not part of the list.
+
+
+- Which command would you use to show the attributes of the resource called classics stored in the terraform state?
+
+    # terraform state show local_file.classics
+
+
+- We no longer wish to manage the file located at /root/anime/hall-of-fame.txt by Terraform. Remove the resource responsible for this file completely from the management of terraform.
+
+    # Remove the resource block called hall_of_fame from the main.tf 
+        and also remove it from the state file by running "terraform state rm local_file.hall_of_fame"
+
+
+- What is the id of the random_pet resource called super_pet_2 in the state file? The state file is stored remote.
+
+    # terraform state show random_pet.super_pet_2
+
+
+- Rename the resource from super_pet_1 to ultra_pet.
+    Change the name in the main.tf file as well as the state.
+
+    # Change the name in the main.tf and also run terraform state mv random_pet.super_pet_1 random_pet.ultra_pet
