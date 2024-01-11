@@ -33,6 +33,39 @@
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/04f5506c-3947-45c0-88ae-76d3f1edb338)
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0f215bdd-f061-4c2b-b8e0-dde6efd5c410)
+</br>
+</br>
+
+## 3: Terraform State Commands :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/38dff626-941e-4063-8c09-4f6cf8bf7f58)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b6a0b60a-52e4-4770-a201-5f2bf278a03c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6869f2aa-1a3b-4a6d-a122-3f5b11f524c4)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/28920aac-a4a9-48fe-881a-37843a4ad8a6)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ca4dd331-a1cc-45f5-9178-23153d39e58c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b4d63df8-d23c-41a0-ad7e-e921b61b25ed)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/af6e7f0a-3d58-471f-b075-80f3ae61cae7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/bd0fe52d-ad93-4092-9031-8cff86d1c796)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ff583d7c-c1f5-4052-973e-83571c84ed2d)
+
+
+
+
+
+
+
+
+
+
 
 
 
