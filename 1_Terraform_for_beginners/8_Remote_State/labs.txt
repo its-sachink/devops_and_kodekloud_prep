@@ -1,0 +1,65 @@
+######### 1 : Lab : Remote State #########
+
+- In this lab, we will work with remote terraform state files.
+
+    We will first start with the local state and then migrate it to remote state with an S3 backend.   
+
+    The configuration directory we will work with is /root/terraform-projects/RemoteState
+
+
+- Resource Name: state
+    filename: /root/<variable local-state>
+    content: "This configuration uses <variable local-state> state"
+
+    Use the variable called local-state in the variables.tf file which is already created for you and make use of variable interpolation syntax ${..}.
+    Once the configuration is ready, run a terraform init, plan and apply.
+
+    ------- main.tf --------
+    resource "local_file" "state" {
+    filename = "/root/${var.local-state}"
+    content  = "This configuration uses ${var.local-state} state"
+
+    }
+
+    -------- variables.tf --------
+    variable remote-state {
+        type = string
+        default = "remote"
+    }
+    variable local-state {
+        type = string
+        default = "local"
+    }
+
+
+- Let's now move the state to a remote S3 backend. For this, we will make use of an S3 compatible storage called minio.
+    Minio provides an S3-compatible API and allows us to configure the s3 backend in the same way as the actual S3 service in AWS Cloud.
+
+    To explore minio and the S3 bucket that has been created, click on the Minio Browser tab on the top of the terminal window..
+    Use the following credentials to login:
+        
+        Access Key: foofoo
+        Secret Key: barbarbar
+
+
+- Now, let us configure the remote backend with s3. Add a terraform block in a new file called terraform.tf with the following arguments:
+    
+    bucket: remote-state
+    key: terraform.tfstate
+    region: us-east-1
+
+    --------- terraform.tf -----------
+    terraform {
+        backend "s3" {
+            key = "terraform.tfstate"
+            region = "us-east-1"
+            bucket = "remote-state"
+        }
+    }
+
+    ❯ terraform apply
+╷   │ Error: Backend initialization required, please run "terraform init"
+
+    - Hence run "terraform init" command again, to move state file to the S3 backend.
+
+
