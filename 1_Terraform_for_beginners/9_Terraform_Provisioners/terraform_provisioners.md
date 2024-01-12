@@ -130,6 +130,29 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3ed7c667-df08-4d3b-bb0e-b9be8c8e8f7d)
 
+</br>
+</br>
+
+## 5 - Considerations with Provisioners :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2e310bb8-0e0f-434b-ac50-9298428b0d43)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c0677dc1-a38d-42ff-8d2c-49d1b07cdb2c)
+
+- Terraform recommends to use provisioners sparingly.
+      - Making use of provisioners increase the complexcity of the configuration.
+      - A connection block must be defined for some provisioners to work. This means that network connectivity from the local machine & authentication to the EC2 instance  must be established before provisioners is run. **This may not be feasible always**.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f77462cd-f869-46df-a478-526a74470abe)
+
+- Better use the user-data resource native provisioner.
+
+  
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/04064a53-e85b-4b35-a87d-83d4f8c9a1f5)
+
+
 
 
 
