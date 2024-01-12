@@ -52,6 +52,44 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c2492166-ee26-48c7-a76c-9da255229280)
 
+</br>
+</br>
+
+## Terraform Import 3 :
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f94def8c-9055-4896-a8cb-de42ce16b59e)
+
+- How to import existing infrastrucutre using "terraform import" command.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ceb81973-1bbe-4a87-bc4a-a5249ece7e56)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cb791421-aaad-499a-8f2a-d411377be5e5)
+
+- But here the data source does not makes terraform to manage the resource, hence use the command "terraform import".
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2538ac08-cad4-449a-b742-80f6dda90026)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d342c65c-eae9-446d-8b7a-fd26fbaa4b4a)
+
+
+- The first time we run the command we will see the error because "terraform import" does not update the configuration files at all. It only updates the state file with the details of the infrastructure being imported.
+- So we have to manullay write the resource configuration. We have to write the empty resource block for that purpose.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cea3b942-40b9-4763-b48e-4a9b80e73be7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0cb5576b-6102-4583-a18f-0e4c511618ca)
+
+- Once you have filled in the required details manually, run the "terraform plan" to refresh the state.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/46bbb837-0761-46e9-a72f-b824e5b661bf)
+
+
+
+
+
+
+
 
 
 
