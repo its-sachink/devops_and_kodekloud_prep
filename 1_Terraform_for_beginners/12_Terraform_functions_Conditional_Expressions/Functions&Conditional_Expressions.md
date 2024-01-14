@@ -23,6 +23,9 @@
  
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4bd4766d-57fa-4e9a-b703-7ea0b8647f35)
 
+</br>
+</br>
+
 ### Categories of functions in terraform :
 </br>
 
