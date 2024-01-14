@@ -74,6 +74,7 @@
 
 </br>
 </br>
+
 - The **Modules** in terraform registry are group based on the provider for which they are created. They can be categorized based on 2 things.
       - Verified module : Tested and maintained by Hashicorp and has a blue-tick on it.
       - Community module : Published by users in community but not validated by Hashicorp.
