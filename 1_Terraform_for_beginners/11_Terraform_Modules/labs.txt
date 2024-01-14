@@ -1,1 +1,75 @@
-touch
+####### Terraform Modules : Lab
+
+#### Sample code #####
+
+- We are using a Public registry to download the terraform modules.
+
+----- main.tf -------
+module "iam_iam-user" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+  version = "5.28.0"
+  # insert the 1 required variable here
+}
+
+------ provider.tf --------
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.11.0"
+    }
+  }
+}
+
+provider "aws" {
+  region                      = var.region
+  skip_credentials_validation = true
+  skip_requesting_account_id  = true
+  endpoints {
+    iam = "http://aws:4566"
+    ec2 = "http://aws:4566"
+    s3 = "http://aws:4566"
+  }
+}
+
+
+------- variables.tf ---------
+variable "region" {
+    default = "us-east-1"
+}
+
+
+
+
+- Now, update this module block that will allow it to create an IAM User called max. Adhere to the following requirements:
+
+        Only use the module block in the main.tf file, do not add a separate resource block.
+        Module Name - iam_iam-user
+        Only add the single required argument at this time.
+
+    When ready, run a terraform init and plan.
+
+    # -------- main.tf --------
+        module "iam_iam-user" {
+            source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+            version = "5.28.0"
+            # insert the 1 required variable here
+            name = "max"
+        }
+
+
+
+
+- We only want to create the IAM User. Update the module block to only allow create_user. 
+    Disable create_iam_access_key and create_iam_user_login_profile.
+
+
+    #---------- main.tf -----------
+        module "iam_iam-user" {
+            source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+            version = "5.28.0"
+            # insert the 1 required variable here
+            name                          = "max"
+            create_iam_user_login_profile = false
+            create_iam_access_key         = false
+        }
