@@ -1,5 +1,6 @@
 # Terraform Modules :
 </br>
+
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/d0f47937-1c63-4f44-83ee-d9776fe6ff08)
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/be04e777-71a0-4d92-9cd3-bf0cc9251ba9)
@@ -44,7 +45,7 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a77890ee-c054-42ab-94d8-ea649faaa033)
 
-- The hardcoding below is being done to ensure that the configuration remain same across each of the resources.
+- The **hardcoding** below is being done to ensure that the configuration remain same across each of the resources.
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4291cba4-f35d-4257-9dd4-5241fc18821c)
 
@@ -65,6 +66,37 @@
 ## 3 Using Modules from the Registry :
 </br>
 </br>
+
+**Local Module** : Reside in the local machine from where we are running terraform.
+**Terraform registry** : It is also used to store the Publicly sharable modules.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1075814c-7c2c-4de9-9a4e-23bfdebccf03)
+
+</br>
+</br>
+- The **Modules** in terraform registry are group based on the provider for which they are created. They can be categorized based on 2 things.
+      - Verified module : Tested and maintained by Hashicorp and has a blue-tick on it.
+      - Community module : Published by users in community but not validated by Hashicorp.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/0251cd70-ebf1-4eca-8955-a07f3c7cbe0c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c9f4e70d-f043-43d5-84f1-4e67c2969cd8)
+</br>
+</br>
+
+### submodule :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1b136ee5-cfc5-46d3-8a72-fdf842ab75c7)
+
+- Usage of submodule :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4d7c1910-4210-4e1c-bd32-a1f97b7e151e)
+
+- **Important** : It is always a good idea to mention the version of the module, if we don't specify the version then in that case terraform **will always download the latest version** which can introduce **undesirable** results.
+- Finally run "terraform plan" and "terraform apply".
+
+
+
 
 
 
