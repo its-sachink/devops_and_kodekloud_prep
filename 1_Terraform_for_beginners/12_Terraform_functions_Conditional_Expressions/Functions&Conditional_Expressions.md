@@ -79,7 +79,11 @@
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/55d57d8a-50ab-494d-a336-69b457c37fb7)
 
+</br>
+</br>
 
+## 3 : Terraform Workspaces (OSS) :
+</br>
 
 
 
