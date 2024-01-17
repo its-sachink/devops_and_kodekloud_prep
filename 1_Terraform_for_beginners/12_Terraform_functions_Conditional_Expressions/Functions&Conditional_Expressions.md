@@ -85,6 +85,57 @@
 ## 3 : Terraform Workspaces (OSS) :
 </br>
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b6cc710e-39e4-4170-b887-f1125e484fa5)
+</br>
+
+- We had a one terraform state file per configuration directory.
+  
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/59455a07-c517-45ad-bf41-302b8e517f2a)
+
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/7c878828-2d52-4471-afe3-d0d238adf8b5)
+
+- What if we want to have ec2 deployment in ProjectA and same deployment in ProjectB with a different AMI Id, here we would copy the configuration files generally with a change in AMI Id.
+- However goal of reusability does not satisfy here.
+
+</br>
+</br>
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e65f36a7-6688-468c-8023-f98ce1f66fad)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/069472c3-45cc-4993-b8b2-efa086b64c83)
+
+
+- **Workspace** : Terraform offers a feature to reuse the configuration files within a directory to be reused multiple times for different use cases, such as creating a ProjectA & ProjectB within in a same configuration directory.
+      - With workspace we can reuse the same configuration directory to create multiple infrastructure environment such as ProjectA & ProjectB.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/5b6fea92-07c6-4793-bf14-c60adc3a7b96)
+
+</br>
+
+- We remove the hardcoded values and configure that as a variables as shown below.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/09049dd2-7c4d-4b73-99ec-2d0da7e4e9cc)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/b729d28c-7515-488a-90e0-9705d2e4f6f6)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6ca2caa4-788e-4d0f-bde5-ab04ecab3ddc)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/318531ad-0403-4c4d-b9bf-253bc42f0292)
+
+</br>
+
+- For each of the workspace it creates a 2 different state files.
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6cffaff6-7418-4ac4-8c9a-d3407846127e)
+
+
+
+
+
+
+
 
 
 
