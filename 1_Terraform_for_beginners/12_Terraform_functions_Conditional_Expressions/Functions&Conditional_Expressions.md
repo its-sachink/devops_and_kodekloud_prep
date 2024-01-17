@@ -126,7 +126,7 @@
 
 </br>
 
-- For each of the workspace it creates a 2 different state files.
+- For each of the workspace it creates a 2 different state files ina directory "terraform.tfstate.d" .
 
 ![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6cffaff6-7418-4ac4-8c9a-d3407846127e)
 
