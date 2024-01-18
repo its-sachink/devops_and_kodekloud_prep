@@ -1,1 +1,12 @@
-touch
+######## Lab : Functions and Conditional Expressions
+
+#### 1 - Functions and Conditional Expressions
+
+- To be done
+
+
+
+
+#### 2 - Terraform Workspaces
+
+- To be done
