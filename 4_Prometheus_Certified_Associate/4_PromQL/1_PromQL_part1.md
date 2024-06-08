@@ -114,8 +114,41 @@
 
 ## 5_Operators :
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/ba87f56b-5436-4ad3-bc88-77054c4fe4f5)
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f82eae16-5a3a-4cd8-be96-edc68addf886)
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f4b7531f-0dd5-4b7f-842c-04129bbec8ae)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/be017d82-cf54-4048-b894-6a68a8307ca0)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4d06b767-a0f0-48c3-89e0-52ef8dca9112)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/13562060-338d-4829-8a41-87e59171aa2d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cf39e437-ed6f-4671-bf3b-7defab8ef4bd)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/9ecaee00-a60f-4a98-ba7a-38db7a1addd4)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4ea33271-d13a-4a7a-a002-e45b276b58f9)
+
+### Logical Operators :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/aca1d278-91db-4de9-841e-3910e6dde58c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/29f1ed93-0e86-48ea-bcaa-1102321bbe2d)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/810f8f4f-fd30-4e88-a1ad-2bdbebce0692)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/1de663de-54e0-410e-8042-11165e783755)
+
+#### Demo :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a8962851-80c4-4ad4-b625-ed310065acac)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6d743dd7-d341-437c-9618-8164f1647c7c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/cc12544d-144b-413a-b2eb-dc795e22a580)
 
 </br>
 </br>
