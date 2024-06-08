@@ -155,7 +155,56 @@
 
 ## 6_Vector Matching :
 
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f258fa37-d7b0-48bf-b09e-8b75d84b57cf)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/544b441c-3fd3-4580-8001-369b98c09f12)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/8e2fe801-e607-4e6f-a256-a2dd51c1d1ec)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/52969cec-6565-431f-b912-5e2a0da3389c)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/a21299bb-b6ef-4cea-8c9a-62cbc78518a6)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/4c3405c0-03f4-4481-8d83-cc6e2efeade3)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/6ea77195-4216-4999-bc7b-9df5f9ca24f2)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f7b61b8e-14f6-4aeb-8c8a-0fc409d291e5)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f45e3acd-a93f-400c-a637-348b577a0f92)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/f42e13d3-f7bc-4797-8351-6ca2f44f4d42)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2a8fe219-7132-4f0a-b94c-87352060e74f)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/283c4c6f-85eb-4494-abbb-1c97839d6701)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2c62bb2b-8f66-444e-8858-54e16de8a8b7)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/e634d733-3d9a-4054-b852-495f2b764b1b)
+
+### Demo :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/3cf9612b-da68-4ce1-aa5d-aabb7540f614)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/adb4289d-48c4-4d44-984c-725024ec6f36)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/14233929-37fa-423f-a433-0245857cf665)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/c83293b5-1625-4424-9ae5-74eef7852630)
+
+- group vector :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/2c07a4ea-0ec1-4b9b-aa73-7f69d37af48e)
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/79f94b0b-3a56-41fc-b837-f428ed0007a7)
+
+
 </br>
 </br>
 
 ## 7_Aggregation :
+
+![image](https://github.com/its-sachink/devops_and_kodekloud_prep/assets/25415707/155871b2-90b7-4ea7-948b-9f8175e5de4a)
+
+
